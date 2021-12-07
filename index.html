@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Gamevio</title>
+
+    <link href="./Gamevio_files/cssfile.css" rel="stylesheet" type="text/css">
+
+    
+  </head>
+  <body>
+    <script>
+      function About(){
+        document.getElementById("about").scrollIntoView({ block: 'end',  behavior: 'smooth' });     
+      }
+      function Features(){
+        document.getElementById("featres").scrollIntoView({ block: 'end',  behavior: 'smooth' });      
+      }
+      function Portfolio(){
+        document.getElementById("gallery").scrollIntoView({ block: 'end',  behavior: 'smooth' });      
+      }
+      function Team(){
+        document.getElementById("cards-section").scrollIntoView({ block: 'end',  behavior: 'smooth' });       
+      }
+      function Contact(){
+        document.getElementById("contact-form").scrollIntoView({ block: 'end',  behavior: 'smooth' });       
+      }
+      function OpenNav(){
+           document.getElementById("SmallNav").style.height = "200px";   
+      }
+      function CloseNav(){
+        document.getElementById("SmallNav").style.height = "0";   
+
+      }
+      function sendMail() {
+        var email = document.getElementById("email").value;
+        var subject = document.getElementById("subject").value;
+        var message = document.getElementById("message").value;
+        if(email != "" && subject != ""){
+            var link = "mailto:gameviostudios@gmail.com"
+                  + "?subject=" + encodeURIComponent(subject)
+                  + "&body=" +  encodeURIComponent(message)
+          ;      
+          window.location.href = link;
+        }
+
+      }
+    </script>
+    
+
+
+    <section class="intro wf-section">
+      <div id = "SmallNav" style= "background-color: rgba(0, 0, 0, 0.781);position:absolute;width:100%;height: 0; overflow-y: hidden;transition: 0.5s;" >
+        <nav style="padding: 20px;">
+          <a class="color" style = "cursor: pointer;"  onclick="About()">About</a>
+          <a class="color" style = "cursor: pointer;" onclick="Portfolio()">Portfolio</a>
+          <a class="color" style = "cursor: pointer;" onclick="Team()">Team</a>
+          <a class="color" style = "cursor: pointer;" onclick="Features()">Features</a>
+          <a class="color" style = "cursor: pointer;" onclick="Contact()">Contact</a>
+          <a class="color" style = "cursor: pointer;" onclick="CloseNav()">X</a>
+          
+        </nav>
+      </div>
+      <div data-collapse="medium"  class="navigation w-nav">
+        <div class="navigation-wrap">
+          <div class="menu">
+            <nav role="navigation" class="navmenubg w-nav-menu" style="transform: translateY(0px) translateX(0px);">
+              <a class="navigation-item w-nav-link" onclick="About()">About</a>
+              <a  class="navigation-item w-nav-link" onclick="Features()">Features</a>
+              <a  class="navigation-item w-nav-link" onclick="Portfolio()">Portfolio</a>
+              <a  class="navigation-item w-nav-link" onclick="Team()">Team</a>
+              <a  class="navigation-item w-nav-link" onclick="Contact()">Contact</a>
+            
+              
+            </nav>
+            <div class="menu-button w-nav-button" >
+              <img src="./Gamevio_files/menu_icon.png" width="22" alt="Menu" class="menu-icon" onclick="OpenNav()">
+            </div>
+          </div>
+        </div>
+        <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0" style="display: none;"></div>
+      </div>
+      <div class="intro_container w-container">
+        <h1 class="intro_heading color">GAMEVIO</h1>
+        <div class="intro_text color">THE BEST 3D ASSETS UNDER ONE ROOF</div>
+      </div>
+    </section>
+    <section id="about" class="about wf-section">
+      <div class="about_div">
+        <h2 class="about_heading">Learn More</h2>
+        <p class="color">A strong training offers us the chance to take your needs and fulfill them with the upmost speed, integrity, and comprehensive quality. It is the establishment for a stable and satisfying profession. Our team boasts long periods of experience and can offer a wide scope of administrations, covering everything you may need to start your game development progect.</p>
+      </div>
+    </section>
+    <section id="featres" class="features wf-section">
+      <div class="features_div color">
+        <h1 class="features_heading color">Our Amenities</h1>
+        <p class="features_text color">A strong training offers us the chance to take your needs and fulfill them with the upmost speed, integrity, and comprehensive quality. It is the establishment for a stable and satisfying profession. Our experienced team boasts long periods of experience and can offer a wide scope of administrations, covering everything you may need to cover your game development studio solution.</p>
+        <div class="features_bull">
+          <div class="features_bull_top">
+            <div class="features_bull_top_left">
+              <h4 class="features_bull_top_left_heading color">Observant</h4>
+              <p class="features_bull_top_left_text">We keep a close eye on every component of our work to ensure nothing is left out.</p>
+            </div><div class="features_bull_top_right">
+              <h4 class="features_bull_top_right_heading color">Heading</h4>
+              <p class="features_bull_top_right_text">We pride ourselves on being people people, and always work to provide a comfortable experience.</p>
+            </div>
+          </div>
+          <div class="div-block-9">
+            <div class="features_bull_bot_left">
+              <h4 class="features_bull_bot_left_heading">Reliable</h4>
+              <p class="features_bull_bot_left_text">You can count on us to make sure your project is completed with care.</p>
+            </div>
+            <div class="features_bull_bot_right">
+              <h4 class="features_bull_bot_right_heading">Trusted</h4>
+              <p class="features_bull_bot_right_text">We are trusted by thousands all around the world to deliver quality work on time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="gallery" class="portfolio wf-section">
+      <div class="portfolioteam_container w-container">
+        <h2 class="color">Our Portfolio</h2>
+        <div class="portfolio_grid">          
+          <img src="./Gamevio_files/project1.jpeg" alt="2D Pixel Art Game" class="gallery-thumbnail">                    
+          <img src="./Gamevio_files/project2.jpeg" alt="2D Pixel Art Game" class="gallery-thumbnail">                   
+          <img src="./Gamevio_files/project3.jpeg" alt="3D Sceen Hospital" class="gallery-thumbnail">
+          <img src="./Gamevio_files/project4.jpeg" alt="3D Sceen Cabin" class="gallery-thumbnail">          
+        </div>
+      </div>
+    </section>
+    <section id="cards-section" class="team wf-section">
+      <div class="team_div">
+        <div class="portfolioteam_container w-container">
+          <h2 class="color">Our Team</h2>
+          <div class="team_grid">
+            <div class="divb">
+              <div class="cards-image-mask">
+                <img src="./Gamevio_files/person2.jpeg" alt="Matthew Picture" class="cards-image">
+              </div>
+              <h3 class="centerline color">Chief Executive Officer</h3>
+              <p class="color centerline">Matthew, our founder and director, boasts years of industry expertise and an inspirational commitment to our vision. Without leadership like this, we would not be who we are today.</p>
+            </div>
+            <div class="divb">
+              <div class="cards-image-mask">
+                <img src="./Gamevio_files/person1.jpeg" alt="Lindsay Picture" class="cards-image">
+              </div>
+              <h3 class="centerline color">Marketing Director<br></h3>
+              <p class="centerline color">Lindsay’s creativity and brand thinking helped make the company’s mark on the industry. Since joining the company in 2014, her leadership has driven the team to incredible success.</p>
+            </div>
+            <div class="divb">
+              <div class="cards-image-mask">
+                <img src="./Gamevio_files/person3.jpeg" alt="Alex Picture" class="cards-image">
+              </div>
+              <h3 class="centerline color">Project Manager<br></h3>
+              <p class="centerline color">Alex’s dedication to her position is second to none. She is well respected by her team as well as the entire industry. She has been meeting deadlines and getting things done right with us since 2012.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact-form" class="contact wf-section">
+      <div>
+        <h2 class="color">Contact Us</h2>
+      </div>
+      <div>
+        <form>
+          <label class="color">Subject</label>
+          <input type="text" class="w-input" maxlength="256" name="name" data-name="Name" id="subject">
+          <label class="color">Your Email</label>
+          <input type="email" class="w-input" maxlength="256" name="email" data-name="Email" id="email" required="">
+          <label class="color">Message</label>
+          <textarea maxlength="5000" id="message" name="massage" data-name="massage" class="w-input textar"></textarea>
+          <div class="contact_submit_div">
+            <input onclick="sendMail()" type="submit" value="Submit" data-wait="Please wait..." class="submit_button w-button">
+          </div>
+        </form>
+        <div class="w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </div>
+    </section>
+    
+  </body>
+</html>
